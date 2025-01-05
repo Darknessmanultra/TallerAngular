@@ -1,0 +1,18 @@
+<nav>
+    <a routerLink="/">Product List</a> |
+    <a routerLink="/cart">Cart</a>
+</nav>
+<router-outlet></router-outlet>
+
+<input type="text" placeholder="Search products..." (input)="onSearch($event)" />
+        <div *ngFor="let product of products">
+            <h3>{{ product.name }}</h3>
+            <p>\${{ product.price }}</p>
+            <button (click)="addToCart(product)">Add to Cart</button>
+        </div>
+
+        <div *ngIf="totalPages > 1" class="pagination">
+            <button [disabled]="currentPage === 1" (click)="goToPage(currentPage - 1)">Previous</button>
+            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+            <button [disabled]="currentPage === totalPages" (click)="goToPage(currentPage + 1)">Next</button>
+        </div>
