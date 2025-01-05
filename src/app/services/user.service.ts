@@ -9,6 +9,10 @@ export class UserService {
   private apiUrl = 'http://localhost:5262/api';
   constructor(private http: HttpClient) { }
 
+  getProfile(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/profile`);
+  }
+
   updateProfile(data: { name: string; email: string }): Observable<any> {
     return this.http.put(`${this.apiUrl}/Update_Profile`, data);
   }
