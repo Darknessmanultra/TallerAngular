@@ -7,6 +7,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CartComponent } from './components/cart/cart.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AdminProductManagementComponent } from './components/admin-product-management/admin-product-management.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
     ProductListComponent,
     CartComponent,
     EditProfileComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    LoginComponent,
+    RegisterComponent,
+    AdminProductManagementComponent
   ],
   imports: [
     BrowserModule,
